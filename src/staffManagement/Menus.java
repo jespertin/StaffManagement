@@ -34,6 +34,7 @@ public class Menus {
                 case 3 -> {
                     showAllEmployees();
                     Employee e = findEmployeeById();
+                    assert e != null;
                     e.assignBonus(e);
                 }
                 case 4-> EmployeeManagement.loadDb();

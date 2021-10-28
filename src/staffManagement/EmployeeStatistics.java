@@ -10,27 +10,27 @@ import static staffManagement.Utilities.pauseCode;
 public class EmployeeStatistics {
 
     static DoubleSummaryStatistics salaryStatAll = employees.stream()
-            .mapToDouble(e -> e.getSalary())
+            .mapToDouble(Employee::getSalary)
             .summaryStatistics();
 
     static DoubleSummaryStatistics statSalaryProgrammers = employees.stream()
             .filter(e -> e instanceof Programmer)
-            .mapToDouble(e -> e.getSalary())
+            .mapToDouble(Employee::getSalary)
             .summaryStatistics();
 
     static DoubleSummaryStatistics statSalaryItTech = employees.stream()
             .filter(e -> e instanceof ItTech)
-            .mapToDouble(e -> e.getSalary())
+            .mapToDouble(Employee::getSalary)
             .summaryStatistics();
 
     static DoubleSummaryStatistics statSalaryItJanitor = employees.stream()
             .filter(e -> e instanceof Janitor)
-            .mapToDouble(e -> e.getSalary())
+            .mapToDouble(Employee::getSalary)
             .summaryStatistics();
 
     static DoubleSummaryStatistics statSalaryProjectLeader = employees.stream()
             .filter(e -> e instanceof ProjectLeader)
-            .mapToDouble(e -> e.getSalary())
+            .mapToDouble(Employee::getSalary)
             .summaryStatistics();
 
     static DecimalFormat f = new DecimalFormat("##.00");

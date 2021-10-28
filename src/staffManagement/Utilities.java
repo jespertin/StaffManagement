@@ -48,7 +48,7 @@ public class Utilities {
     }
 
     public static void readFromFile() throws IOException {
-        ArrayList<Employee> emp = EmployeeManagement.employees;
+        ArrayList<Employee> emp;
 
         FileInputStream input = new FileInputStream
                 ("C:\\Users\\jespe\\IdeaProjects\\StaffManagement\\src\\staffManagement\\EmployeeDB.txt");
